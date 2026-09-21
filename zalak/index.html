@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Housing Marketplace - Premium Luxury Real Estate</title>
+  <meta name="description" content="Discover elite luxury properties with Housing Marketplace. Find your dream home, luxury penthouses, oceanfront villas, and modern apartments.">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Core Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Screen Loader -->
+  <div id="loader">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo" id="nav-logo">
+        <i class="fa-solid fa-hotel"></i> HOUSING<span>MARKET</span>
+      </a>
+      
+      <nav class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="buy.html">Buy Property</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn-icon theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="btn btn-primary btn-login" id="nav-login-btn">
+          <i class="fa-solid fa-right-to-bracket"></i> Login
+        </button>
+        <button class="mobile-menu-btn" aria-label="Open Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="drawer-overlay"></div>
+  <aside class="mobile-nav">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-hotel"></i> HOUSING
+      </a>
+      <button class="btn-icon btn-close-drawer" aria-label="Close Menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="buy.html">Buy Property</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="mobile-nav-actions">
+      <button class="btn btn-outline theme-toggle-btn">
+        <i class="fa-solid fa-moon"></i> Theme Mode
+      </button>
+      <button class="btn btn-primary btn-login">
+        <i class="fa-solid fa-right-to-bracket"></i> Login
+      </button>
+    </div>
+  </aside>
+
+  <!-- Hero Section -->
+  <section class="hero" style="background-image: url('assets/hero.jpg');">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-tag">Elite Living Collection 2026</span>
+        <h1 class="hero-title">Find Your Signature Luxury Residence</h1>
+        <p class="hero-desc">Explore our curated collection of architectural masterpieces in elite locations. Your vision of premium living begins here.</p>
+      </div>
+
+      <!-- Search Panel -->
+      <div class="search-panel glass">
+        <div class="search-tabs">
+          <button class="search-tab-btn active" data-mode="buy">Buy</button>
+          <button class="search-tab-btn" data-mode="rent">Rent</button>
+          <button class="search-tab-btn" data-mode="commercial">Commercial</button>
+        </div>
+        <form class="search-fields-grid" id="hero-search-form">
+          <div class="search-field">
+            <label for="search-location">Location</label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-location-dot"></i>
+              <input type="text" id="search-location" placeholder="e.g. Miami, Malibu, Aspen...">
+            </div>
+          </div>
+          <div class="search-field">
+            <label for="search-budget">Max Budget</label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-dollar-sign"></i>
+              <select id="search-budget">
+                <option value="">Any Price</option>
+                <option value="3000000">$3,000,000</option>
+                <option value="5000000">$5,000,000</option>
+                <option value="8000000">$8,000,000</option>
+                <option value="10000000">$10,000,000</option>
+              </select>
+            </div>
+          </div>
+          <div class="search-field">
+            <label for="search-type">Property Type</label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-house"></i>
+              <select id="search-type">
+                <option value="">All Types</option>
+                <option value="Villa">Villa</option>
+                <option value="Penthouse">Penthouse</option>
+                <option value="Apartment">Apartment</option>
+                <option value="Mansion">Mansion</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="height: 48px; width: 100%;">
+            <i class="fa-solid fa-magnifying-glass"></i> Search
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Categories</span>
+        <h2 class="section-title">Explore Our Marketplace</h2>
+        <p class="section-desc">Browse through diverse luxury properties catering to your specific architectural desires.</p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Card 1 -->
+        <div class="category-card" onclick="location.href='buy.html?mode=buy'">
+          <img src="assets/prop_1.jpg" alt="Buy Properties">
+          <div class="category-content">
+            <h3 class="category-title">Properties for Sale</h3>
+            <span class="category-amount">Explore Listings &rarr;</span>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="category-card" onclick="location.href='buy.html?mode=rent'">
+          <img src="assets/prop_2.jpg" alt="Rent Properties">
+          <div class="category-content">
+            <h3 class="category-title">Properties for Rent</h3>
+            <span class="category-amount">Explore Listings &rarr;</span>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="category-card" onclick="location.href='buy.html?type=Villa'">
+          <img src="assets/prop_4.jpg" alt="Commercial Properties">
+          <div class="category-content">
+            <h3 class="category-title">Exclusive Villas</h3>
+            <span class="category-amount">Explore Listings &rarr;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Properties Section -->
+  <section class="section" style="background-color: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Featured Portfolio</span>
+        <h2 class="section-title">Architectural Highlights</h2>
+        <p class="section-desc">Handpicked properties showcasing state-of-the-art construction, refined aesthetics, and modern finishes.</p>
+      </div>
+
+      <div class="grid-3" id="featured-listings-container">
+        <!-- Dynamic listings injected by JS -->
+      </div>
+
+      <div class="flex-center" style="margin-top: 48px;">
+        <a href="buy.html" class="btn btn-secondary">
+          View All Properties &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Why Choose Us</span>
+        <h2 class="section-title">Uncompromising Standards</h2>
+        <p class="section-desc">Our commitment to luxury living guarantees premium service and elite opportunities.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="why-card">
+          <div class="why-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>Verified Real Estate</h3>
+          <p>Every single listing on our portal undergoes thorough checks by our legal and structural verification teams.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fa-solid fa-user-tie"></i></div>
+          <h3>Elite Broker Service</h3>
+          <p>Connect with top-tier brokers specialized in luxury domains, providing tailored negotiation strategies.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fa-solid fa-gem"></i></div>
+          <h3>Curated Luxury Catalog</h3>
+          <p>We filter out standard units, showcasing only exclusive designs, penthouses, and bespoke custom layouts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section" style="background-color: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Client Feedback</span>
+        <h2 class="section-title">What Our Elite Clients Say</h2>
+        <p class="section-desc">Read about the premium experiences enjoyed by individuals who found their luxury sanctuaries with us.</p>
+      </div>
+
+      <div class="testimonials-slider">
+        <div class="testimonial-track" id="testimonial-track">
+          <!-- Slide 1 -->
+          <div class="testimonial-slide">
+            <p class="testimonial-quote">"Purchasing The Obsidian Villa was absolute bliss. The transaction structure was clean, and the legal verification was fully digitized and secure. Extremely pleased."</p>
+            <div class="testimonial-user">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100" alt="Client" class="testimonial-avatar">
+              <div class="testimonial-info">
+                <h4>Lord Devonshire</h4>
+                <p>Private Investor</p>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="testimonial-slide">
+            <p class="testimonial-quote">"The premium concierge integration in their listing model sets them apart. I booked a private jet tour to inspect three listings in New York with absolute ease."</p>
+            <div class="testimonial-user">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100" alt="Client" class="testimonial-avatar">
+              <div class="testimonial-info">
+                <h4>Clarissa Fontaine</h4>
+                <p>Tech Founder</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-dots" id="testimonial-dots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-content">
+          <h2>Ready to Begin Your Premium Property Journey?</h2>
+          <p>Sign up now to save custom properties, receive real-time status alerts on bidding details, and get connected with elite brokers.</p>
+          <button class="btn btn-register">Get Started Today</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-bottom: 20px;">
+            <i class="fa-solid fa-hotel"></i> HOUSING<span>MARKET</span>
+          </a>
+          <p>Housing Marketplace represents the absolute pinnacle of luxury real estate. Offering custom-designed villas, premium penthouses, and bespoke architecture across global centers.</p>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="buy.html?type=Villa">Luxury Villas</a></li>
+            <li><a href="buy.html?type=Penthouse">Sky Penthouses</a></li>
+            <li><a href="buy.html?type=Apartment">Prime Condos</a></li>
+            <li><a href="buy.html?type=Mansion">Historic Estates</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Corporate</h3>
+          <ul class="footer-links">
+            <li><a href="contact.html">Our Offices</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Investor Relations</a></li>
+            <li><a href="#">Legal Verification</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>VIP Newsletter</h3>
+          <p>Subscribe to receive early announcements of premium private listings.</p>
+          <form class="newsletter-form" id="newsletter-form">
+            <input type="email" placeholder="Your corporate email..." required>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Housing Marketplace. All Rights Reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Unified Auth Modal (Login/Register) -->
+  <div class="modal" id="auth-modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-container">
+      <button class="btn-close-modal" aria-label="Close Modal"><i class="fa-solid fa-xmark"></i></button>
+      
+      <div class="auth-tabs">
+        <button class="auth-tab-btn active" data-tab="login">Login</button>
+        <button class="auth-tab-btn" data-tab="register">Register</button>
+      </div>
+
+      <!-- Login Panel -->
+      <div class="auth-panel active" id="login-panel">
+        <div class="modal-header">
+          <h3>Welcome Back</h3>
+          <p>Enter your credentials to access saved portfolios.</p>
+        </div>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="login-email">Email Address</label>
+            <input type="email" id="login-email" required placeholder="e.g. name@corporate.com">
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" required placeholder="••••••••">
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Login</button>
+        </form>
+      </div>
+
+      <!-- Register Panel -->
+      <div class="auth-panel" id="register-panel">
+        <div class="modal-header">
+          <h3>Create VIP Account</h3>
+          <p>Register to sync favorites and connect directly with hosts.</p>
+        </div>
+        <form id="register-form">
+          <div class="form-group">
+            <label for="reg-name">Full Name</label>
+            <input type="text" id="reg-name" required placeholder="e.g. Arthur Dent">
+          </div>
+          <div class="form-group">
+            <label for="reg-email">Email Address</label>
+            <input type="email" id="reg-email" required placeholder="e.g. arthur@galaxy.com">
+          </div>
+          <div class="form-group">
+            <label for="reg-password">Password</label>
+            <input type="password" id="reg-password" required placeholder="Minimum 8 characters">
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Register</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Shared Property Data & App Logic -->
+  <script src="properties.js"></script>
+  <script src="app.js"></script>
+
+  <!-- Page specific JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderFeaturedProperties();
+      initTestimonialSlider();
+      initSearchRedirection();
+      
+      const newsletter = document.getElementById('newsletter-form');
+      if (newsletter) {
+        newsletter.addEventListener('submit', (e) => {
+          e.preventDefault();
+          showToast('Thank you for subscribing to our VIP newsletter!', 'success');
+          newsletter.reset();
+        });
+      }
+    });
+
+    // Render 3 Featured Properties
+    function renderFeaturedProperties() {
+      const container = document.getElementById('featured-listings-container');
+      if (!container) return;
+
+      const featured = properties.slice(0, 3); // Get first 3 properties
+      let html = '';
+
+      featured.forEach(prop => {
+        html += `
+          <article class="property-card" data-id="${prop.id}">
+            <div class="card-img-container">
+              <img src="${prop.image}" alt="${prop.name}">
+              <span class="card-badge"><span class="badge badge-primary">${prop.badge}</span></span>
+              <button class="btn-fav" data-id="${prop.id}" aria-label="Add to Favorites" onclick="toggleFavorite(${prop.id})">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+            <div class="card-content">
+              <div class="card-price">${prop.formattedPrice}</div>
+              <h3 class="card-title">${prop.name}</h3>
+              <div class="card-location"><i class="fa-solid fa-location-dot"></i> ${prop.location}</div>
+              <div class="card-specs">
+                <div class="spec-item"><i class="fa-solid fa-expand"></i> <span>${prop.area} sqft</span></div>
+                <div class="spec-item"><i class="fa-solid fa-bed"></i> <span>${prop.bedrooms} Beds</span></div>
+                <div class="spec-item"><i class="fa-solid fa-bath"></i> <span>${prop.bathrooms} Baths</span></div>
+              </div>
+              <div class="card-footer">
+                <span class="card-type">${prop.type}</span>
+                <button class="btn btn-outline" onclick="viewPropertyDetails(${prop.id})">Details</button>
+              </div>
+            </div>
+          </article>
+        `;
+      });
+
+      container.innerHTML = html;
+      updateFavoriteIcons();
+    }
+
+    function viewPropertyDetails(id) {
+      localStorage.setItem('selectedPropertyId', id);
+      window.location.href = 'details.html';
+    }
+
+    // Search Form Handler Redirection to buy.html
+    function initSearchRedirection() {
+      const form = document.getElementById('hero-search-form');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const locationVal = document.getElementById('search-location').value.trim();
+          const budgetVal = document.getElementById('search-budget').value;
+          const typeVal = document.getElementById('search-type').value;
+
+          let url = 'buy.html?';
+          if (locationVal) url += `location=${encodeURIComponent(locationVal)}&`;
+          if (budgetVal) url += `budget=${budgetVal}&`;
+          if (typeVal) url += `type=${typeVal}&`;
+
+          window.location.href = url.slice(0, -1); // Trim last ampersand
+        });
+      }
+    }
+
+    // Testimonials Slide Rotation
+    function initTestimonialSlider() {
+      const track = document.getElementById('testimonial-track');
+      const dots = document.querySelectorAll('#testimonial-dots .dot');
+      if (!track || dots.length === 0) return;
+
+      let currentIndex = 0;
+      let interval;
+
+      const moveToSlide = (index) => {
+        track.style.transform = `translateX(-${index * 100}%)`;
+        dots.forEach(d => d.classList.remove('active'));
+        dots[index].classList.add('active');
+        currentIndex = index;
+      };
+
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          const index = parseInt(dot.dataset.index);
+          moveToSlide(index);
+          resetTimer();
+        });
+      });
+
+      const startTimer = () => {
+        interval = setInterval(() => {
+          let nextIndex = (currentIndex + 1) % dots.length;
+          moveToSlide(nextIndex);
+        }, 5000);
+      };
+
+      const resetTimer = () => {
+        clearInterval(interval);
+        startTimer();
+      };
+
+      startTimer();
+    }
+  </script>
+</body>
+</html>
