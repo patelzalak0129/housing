@@ -1,0 +1,17 @@
+{
+  "name": "housing-marketplace-ui",
+  "version": "1.0.0",
+  "description": "Modern premium Real Estate Listing Website UI",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx http-server -p 3000"
+  },
+  "keywords": [
+    "realestate",
+    "marketplace",
+    "luxury",
+    "ui"
+  ],
+  "author": "Housing Marketplace Inc.",
+  "license": "MIT"
+}
